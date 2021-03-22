@@ -21,7 +21,6 @@
 body {
   background-color: var(--primary-bg-color);
   font-family: Roboto, sans-serif;
-  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -29,17 +28,43 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Страница "Студия" */
-/* Классы для точечного сброса всроенных настроек */
-.list {
-  list-style: none;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
-.link {
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
   text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  /* outline: 3px solid red; */
+}
+
+/* Страница "Студия" */
+
 /* Оформление heder */
-.logo {
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.logo {  
+  display: inline-block;
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
@@ -47,18 +72,26 @@ body {
   line-height: 1.19;
   color: var(--accent-link-color);
 }
-/* #2196F3 */
-.logo-text {
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+
+.logo-end {
+  display: inline-block;
   color: var(--title-text-color);
 }
+
 /* Навигация */
+.box {
+  display: flex;
+}
+.heder-nav {
+  display: flex;
+  margin-right: 300px;
+}
+.logo .logo-end {
+  margin-right: 93px;
+}
 .site-nav .link {
+  /* display: flex; */
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
@@ -70,32 +103,59 @@ body {
 .site-nav .link.current {
   color: var(--accent-link-color);
 }
-.contakt .link {
+.nav-item {  
+  display: inline-block;
+ }
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.header-contact .link{
+  display: flex;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--title-text-color);
+  color: var(--primary-text-color);
 }
-.contakt .link:hover,
-.contakt .link:focus {
+.header-contact .link:hover,
+.header-contact .link:focus{
   color: var(--accent-link-color);
 }
+.contact-item {
+  display: inline-block;
+ }
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 
 /* Оформление main */
 /* section-hero */
 .hero {
+  padding: 200px 0;
   letter-spacing: 0.06em;
   background-color: var(--accent-bg-color);
 }
 .hero-title {
+  width: 696px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-transform: uppercase;
+  text-align: center;
   color: var(--accent-text-color);
+
+  /* outline: 3px solid red; */
 }
 .hero-button {
+  display: inline-block;
+  border: 0px;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -106,57 +166,113 @@ body {
   background: var(--accent-link-color);
 }
 /* section "Наши преимущества" и "Чем мы занимаемся" */
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .title-section {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-.title-list {
+.title-section.no-title {
+display: none;
+}
+.advantages-list {
+  display: flex;
+}
+.advantages-item {
+  width: 270px;
+    }
+.advantages-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advantages-description {
+  width: 270px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   color: var(--title-text-color);
   text-transform: uppercase;
 }
+.work {
+  padding-bottom: 94px;
+}
+.work-list {
+  display: flex;
+}
+.work-item {
+  display: block;
+  margin-right: 30px;
+}
+
 /* "Наша команда" */
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background: var(--accent-bg-second-color);
 }
 .team-title {
+  text-align: center;
+  padding-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+.team-list {
+  display: flex;
+  flex-basis: calc(100%/4);
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-img {
+  /* display: inline-block; */
+  margin-bottom: 30px;
+}
 .team-text {
+  text-align: center;
+  padding-bottom: 30px;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.19;
 }
 /* footer */
-.logo-footer {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--accent-text-color);
-}
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: var(--accent-bg-color);
 }
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--accent-text-color);
+}
 .footer-adress {
+  margin-bottom: 9px;
   font-style: normal;
   color: var(--accent-text-color);
 }
 .footer-contact .link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  display: block;
+  margin-bottom: 9px;
   color: var(--footer-text-color);
 }
 .footer-contact .link:hover,
 .footer-contact .link:focus {
   color: var(--accent-link-color);
 }
+
+/* Не могу понять, почему не работает эта функция */
+/* .footer-contact .link:not(:last-child) {
+  margin-bottom: 9px;
+} */
 
 /* Страница "Портфолио" */
 /* Секция main */
