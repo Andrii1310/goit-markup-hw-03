@@ -68,7 +68,11 @@ img {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
+
   /* background-color: lightcoral; */
+}
+.page-portfolio {
+  border-bottom: 1px solid #ECECEC;
 }
 .logo {  
   display: inline-block;
@@ -91,7 +95,6 @@ img {
 }
 .heder-nav {
   display: flex;
-  margin-right: 300px;
 }
 .logo .logo-end {
   margin-right: 93px;
@@ -114,6 +117,9 @@ img {
 }
 .nav-item:not(:last-child) {
   margin-right: 50px;
+}
+.header-contact {
+  margin-left: auto;
 }
 .header-contact .link{
   display: flex;
@@ -150,6 +156,7 @@ img {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
   color: var(--accent-text-color);
@@ -157,8 +164,9 @@ img {
   /* outline: 3px solid red; */
 }
 .hero-button {
-  display: inline-block;
+  display: block;
   border: 0px;
+  margin: 0 auto;
   min-width: 200px;
   border-radius: 4px;
   padding: 10px 32px;
@@ -171,7 +179,7 @@ img {
   color: var(--accent-text-color);
   background: var(--accent-link-color);
 }
-/* section "Наши преимущества" и "Чем мы занимаемся" */
+/* section "Наши преимущества" */
 .advantages {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -207,6 +215,29 @@ img {
   color: var(--title-text-color);
   text-transform: uppercase;
 }
+
+/* Section Activity  и "Чем мы занимаемся" */
+.activity {
+  padding-bottom: 94px;
+}
+
+.activity-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.activity-item {
+  margin-right: 30px;
+}
+.activity-item:nth-child(3n+3) {
+  margin-right: 0;
+}
+/* .activity-list > .activity-item {
+  flex-basis: calc(100% / 3 -30px);
+} */
+/* .activity-item * {
+  outline: 1px solid red;
+} */
+
 
 /* "Наша команда" */
 .team {
@@ -306,18 +337,14 @@ img {
 .work-list {
   display: flex;
   flex-wrap: wrap;
-
-  /* font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  color: var(--title-text-color); */
 }
 .work-item {
-  display: block;
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 .work-item:nth-child(3n+3) {
   margin-right: 0;
+  margin-bottom: 0;
 }
 .work-list > .work-item {
   flex-basis: calc(100% / 3 -30px);
@@ -328,6 +355,9 @@ img {
 } */
 .work-content {
   padding: 20px 24px;
+  border-right: 1px solid #ECECEC;
+  border-bottom: 1px solid #ECECEC;
+  border-left: 1px solid #ECECEC;
 }
 .work-text {
   margin-bottom: 4px;
